@@ -24,28 +24,36 @@ def crop_sides(page_to_crop, side='right'):
         writer.add_page(page_to_crop)
 
 def eval_sizes(page_to_eval):
+    """
+        The pages are  resized based on a rectangle like this:
+        Whereas the coordinates are used to cut from left and right
+    """
+
+    # print(f'Evaluating page sizes')
+
     yx = page_to_eval.cropbox.upper_right
     y_upper_right = yx[0]
     x_upper_right = yx[1]
-    print(f'{y_upper_right},{x_upper_right}')
+    
+    # print(f'y2:{y_upper_right}, x2:{x_upper_right}')
 
     x0y = page_to_eval.cropbox.lower_right
     y_lower_right = x0y[0]
     x0_lower_right = x0y[1]
-    print(f'{y_lower_right},{x0_lower_right}')
+    # print(f'y2:{y_lower_right}, x1:{x0_lower_right}')
 
     xy0 = page_to_eval.cropbox.upper_left
     y0_upper_left = xy0[0]
     x_upper_left = xy0[1]
-    print(f'{y0_upper_left},{x_upper_left}')
+    # print(f'y1:{y0_upper_left}, x2:{x_upper_left}')
 
     xy00 = page_to_eval.cropbox.lower_left
     y0_lower_left = xy00[0]
     x0_lower_left = xy00[1]
-    print(f'{y0_lower_left},{x0_lower_left}')
+    # print(f'y1:{y0_lower_left}, x1:{x0_lower_left}')
 
     lowerLeft = x_upper_right/2
-    print(f'Half:{lowerLeft}')
+    # print(f'Half:{lowerLeft}')
 
 #Executing
 eval_sizes(reader.pages[1])
