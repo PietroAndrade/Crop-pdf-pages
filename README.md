@@ -11,4 +11,4 @@ Sometimes it resizes to the left, sometimes to the right
 
 *If you want to see your file's coordinates, uncomment the lines in the eval method.*
 
-**For usage**: Insert the pdf into this folder and then run the script
+**For usage**: Insert the pdf into this folder, rename the line 4 and then run the script
