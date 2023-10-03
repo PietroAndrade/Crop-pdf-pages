@@ -1,5 +1,8 @@
 from PyPDF2 import PdfWriter, PdfReader
 
+#Insert here your file name
+file_name = "example.pdf" 
+
 reader = PdfReader("example.pdf")
 writer = PdfWriter()
 
