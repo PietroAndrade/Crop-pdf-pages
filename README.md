@@ -1,3 +1,4 @@
+# Crop-pdf-pages
 When a book pdf has been scanned with two pages per sheet, but its order is messed up and it can't be printed as a booklet or book.
 
 This script takes care of that, using the PyPDF2 lib to read the old pages, crop them in half and then make a new pdf.
